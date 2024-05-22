@@ -1,0 +1,21 @@
+{
+  "name": "foodorderingapp",
+  "version": "1.0.0",
+  "description": "food ordering app",
+  "main": "app.js",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "author": "shwetank",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browsersList": ["last 2 Version"]
+}
