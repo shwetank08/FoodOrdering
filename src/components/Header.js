@@ -8,7 +8,6 @@ const Header = () => {
             </div>
             <div className='flex flex-row'>
                 <ul className='flex gap-6'>
-                    <li>Search</li>
                     <li>About</li>
                     <li>Cart</li>
                 </ul>
