@@ -17,10 +17,10 @@ const Body = () => {
     setResList((prevList) => {
       const newRestaurants = res.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
-      // Merge with previous list and remove duplicates using a Set (based on restaurant ID)
+      // Merge with previous list and remove duplicates using a Set 
       const mergedList = [...prevList, ...newRestaurants];
     
-      // Remove duplicates based on a unique identifier (assuming each restaurant has an `id`)
+      // Remove duplicates based on name
       const uniqueRestaurants = Array.from(new Map(mergedList.map(item => [item?.info?.name, item])).values());
 
       console.log("uniqueRestaurants", uniqueRestaurants);
