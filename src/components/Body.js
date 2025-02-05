@@ -21,7 +21,7 @@ const Body = () => {
       const mergedList = [...prevList, ...newRestaurants];
     
       // Remove duplicates based on a unique identifier (assuming each restaurant has an `id`)
-      const uniqueRestaurants = Array.from(new Map(mergedList.map(item => [item?.info?.id, item])).values());
+      const uniqueRestaurants = Array.from(new Map(mergedList.map(item => [item?.info?.name, item])).values());
 
       console.log("uniqueRestaurants", uniqueRestaurants);
       
