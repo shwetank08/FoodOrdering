@@ -9,7 +9,7 @@ const RestaurantCard = ({
   sla,
 }) => {
 
-  {console.log("values -->",cloudinaryImageId, name,avgRating,cuisines,sla?.deliveryTime)}
+  // {console.log("values -->",cloudinaryImageId, name,avgRating,cuisines,sla?.deliveryTime)}
 
 
   return (
