@@ -7,6 +7,7 @@ const Body = () => {
   const [resList, setResList] = useState([]);
   const [search, setSearch] = useState("");
   const [food, setFood] = useState([]);
+  const [isFiltered, setIsFiltered] = useState(false);
   const fetchData = async () => {
     const apicall = await fetch(URL2);
     const res = await apicall.json();
@@ -14,26 +15,15 @@ const Body = () => {
     //   res.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     // );
     // console.log("res->",res);
-
-    setResList((prevList) => {
-      const newRestaurants = res.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
-
-      // Merge with previous list and remove duplicates using a Set 
-      const mergedList = [...prevList, ...newRestaurants];
-    
-      // Remove duplicates based on name
-      const uniqueRestaurants = Array.from(new Map(mergedList.map(item => [item?.info?.name, item])).values());
-
-      // console.log("uniqueRestaurants", uniqueRestaurants);
-      
-    
-      return uniqueRestaurants;
-  });
+    setResList(
+      res.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants || []
+    );
   };
   useEffect(() => {
     fetchData();
   }, []);
-  fetchData();
+  // fetchData();
 
   if (resList && resList.length === 0) {
     return <Shimmer />;
@@ -45,29 +35,48 @@ const Body = () => {
         <input
           className="w-5/12 p-1 border-none placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500 shadow-md rounded-lg mx-auto"
           placeholder="Search for restraunts"
-          value = {search}
-          onChange={(e)=>{
+          value={search}
+          onChange={(e) => {
             e.preventDefault();
-            setSearch(e.target.value)
-            console.log(e.target.value, search)
+            setSearch(e.target.value);
+            console.log(e.target.value, search);
+          }}
+        ></input>
+        <button
+          onClick={() => {
+            const filtered = resList.filter((res) => {
+              return res.info?.name
+                .toLowerCase()
+                .includes(search.toLowerCase());
+            });
+            setFood(resList);
+            setResList(filtered);
+            setIsFiltered(!isFiltered);
           }}
         >
-        </input>
-        <button onClick={()=>{
-            const filtered = resList.filter((res)=>{
-              return res.info?.name.toLowerCase().includes(search.toLowerCase()); 
-            });
-            setFood(filtered);
-          }}>
-            Search
+          Search
+        </button>
+      </div>
+      {isFiltered && search && (
+        <div className="mt-2">
+          <button
+            className="bg-gray-200 text-black px-3 py-1 rounded text-sm"
+            onClick={() => {
+              setResList(food); // Reset to original list
+              setIsFiltered(false);
+              setSearch(""); // Clear the search term
+            }}
+          >
+            {search} ✖
           </button>
-      </div> 
+        </div>
+      )}
       <div className="p-3 grid grid-cols-4 gap-4">
         {/* {console.log(resList, "FOOD", food)} */}
         {/* {console.log(resList)} */}
 
-        {food &&
-          food.map((restraunt, index) => {
+        {resList &&
+          resList.map((restraunt, index) => {
             // {
             //   console.log(restraunt.info);
             // }
