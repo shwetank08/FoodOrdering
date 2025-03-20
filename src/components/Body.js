@@ -31,32 +31,33 @@ const Body = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="container flex mx-auto mb-2">
-        <input
-          className="w-5/12 p-1 border-none placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500 shadow-md rounded-lg mx-auto"
-          placeholder="Search for restraunts"
-          value={search}
-          onChange={(e) => {
-            e.preventDefault();
-            setSearch(e.target.value);
-            console.log(e.target.value, search);
-          }}
-        ></input>
-        <button
-          onClick={() => {
-            const filtered = resList.filter((res) => {
-              return res.info?.name
-                .toLowerCase()
-                .includes(search.toLowerCase());
-            });
-            setFood(resList);
-            setResList(filtered);
-            setIsFiltered(!isFiltered);
-          }}
-        >
-          Search
-        </button>
+      <div className="container flex items-center justify-center mx-auto mb-2">
+        <div className="flex w-full max-w-md items-center gap-2 bg-white shadow-md rounded-lg px-3 py-2">
+          <input
+            className="flex-grow p-2 border-none placeholder-slate-400 outline-none"
+            placeholder="Search for restaurants"
+            value={search}
+            onChange={(e) => {
+              e.preventDefault();
+              setSearch(e.target.value);
+            }}
+          />
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-all"
+            onClick={() => {
+              const filtered = resList.filter((res) =>
+                res.info?.name.toLowerCase().includes(search.toLowerCase())
+              );
+              setFood(resList);
+              setResList(filtered);
+              setIsFiltered(!isFiltered);
+            }}
+          >
+            Search
+          </button>
+        </div>
       </div>
+
       {isFiltered && search && (
         <div className="mt-2">
           <button
