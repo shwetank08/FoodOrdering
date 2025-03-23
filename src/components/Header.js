@@ -1,16 +1,8 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
-    const currentUrl = useLocation();
-    console.log(currentUrl);
-
-    useEffect(()=>{
-      console.log("Route changed", location.pathname);
-      
-    },[currentUrl])
     
   return (
 
@@ -25,6 +17,13 @@ const Header = () => {
             Cart
           </Link>
         </div>
+        {/* Delete later */}
+        <div className="flex flex-row">
+          <Link to="/ress">
+            Res
+          </Link>
+        </div>
+        {/* Delete later */}
     </div>
 
   );

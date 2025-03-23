@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "../helper/RestaurantCard";
-import SearchBar from "../helper/SearchBar";
-import { URL, URL2 } from "../util/constants";
+import { URL2 } from "../util/constants";
 import Shimmer from "../helper/Shimmer";
 const Body = () => {
   const [resList, setResList] = useState([]);
   const [search, setSearch] = useState("");
   const [food, setFood] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
+
   const fetchData = async () => {
     const apicall = await fetch(URL2);
     const res = await apicall.json();
-    // console.log(
-    //   res.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    // );
-    // console.log("res->",res);
+
     setResList(
       res.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || []
@@ -23,7 +20,6 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  // fetchData();
 
   if (resList && resList.length === 0) {
     return <Shimmer />;

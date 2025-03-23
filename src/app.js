@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Body from './components/Body'
 import Cart from './components/Cart';
 import Error  from './components/Error';
+import Restraunt from './components/Restraunt';
 
 
 const App = () => {
@@ -17,14 +18,18 @@ const App = () => {
     )
 }
 
-const AppRoute = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<App />} errorElement={<Error />}>
-            <Route index element={<Body />} />  {/* Default route ("/") */}
-            <Route path="cart" element={<Cart />} />  {/* "/cart" route */}
-        </Route>
-    )
-);
+const AppRoute = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />, // Ensures Header is always displayed
+      children: [
+        { index: true, element: <Body /> }, // Default route ("/")
+        { path: "/cart", element: <Cart /> }, // "/cart" route
+        { path: "/restraunt/:id", element: <Restraunt /> },
+      ],
+      errorElement: <Error />, // Handles route errors
+    },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

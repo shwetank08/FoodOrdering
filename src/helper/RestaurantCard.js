@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IMGURL } from "../util/constants";
+import { useNavigate } from "react-router-dom";
 
 const RestaurantCard = ({
   cloudinaryImageId,
@@ -7,14 +8,15 @@ const RestaurantCard = ({
   avgRating,
   cuisines,
   sla,
+  id
 }) => {
 
   // {console.log("values -->",cloudinaryImageId, name,avgRating,cuisines,sla?.deliveryTime)}
-
+  let navigate = useNavigate();
 
   return (
-    
-    <div className="container mx-auto flex flex-row flex-1 flex-wrap lg:gap-5">
+
+    <div className="container mx-auto flex flex-row flex-1 flex-wrap lg:gap-5" onClick={()=>{navigate(`/restraunt/${id}`)}}>
       <div className="w-72 max-w-sm rounded overflow-hidden hover:scale-95 flex-start mt-2">
         <img
           src={IMGURL + cloudinaryImageId}
