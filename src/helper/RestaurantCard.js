@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IMGURL } from "../util/constants";
 import { useNavigate } from "react-router-dom";
 
-const RestaurantCard = ({
+export const RestaurantCard = ({
   cloudinaryImageId,
   name,
   avgRating,
@@ -11,7 +11,6 @@ const RestaurantCard = ({
   id
 }) => {
 
-  // {console.log("values -->",cloudinaryImageId, name,avgRating,cuisines,sla?.deliveryTime)}
   let navigate = useNavigate();
 
   return (
@@ -73,7 +72,7 @@ const RestaurantCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 };
 

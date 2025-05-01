@@ -19,8 +19,8 @@ const Header = () => {
         </div>
         {/* Delete later */}
         <div className="flex flex-row">
-          <Link to="/ress">
-            Res
+          <Link to="/about">
+            About
           </Link>
         </div>
         {/* Delete later */}

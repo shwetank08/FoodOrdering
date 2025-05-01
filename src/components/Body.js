@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "../helper/RestaurantCard";
 import { URL2 } from "../util/constants";
 import Shimmer from "../helper/Shimmer";
+import useOnlineStatus from "../util/useOnlineStatus";
+import Offline from "../helper/Offline";
+
 const Body = () => {
   const [resList, setResList] = useState([]);
   const [search, setSearch] = useState("");
   const [food, setFood] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
+
 
   const fetchData = async () => {
     const apicall = await fetch(URL2);
@@ -21,9 +25,16 @@ const Body = () => {
     fetchData();
   }, []);
 
+  const onlineStatus = useOnlineStatus();
+
+  if(onlineStatus === false){
+    return <Offline/>
+  }
+
   if (resList && resList.length === 0) {
     return <Shimmer />;
   }
+
 
   return (
     <div className="container mx-auto p-4">
@@ -69,15 +80,9 @@ const Body = () => {
         </div>
       )}
       <div className="p-3 grid grid-cols-4 gap-4">
-        {/* {console.log(resList, "FOOD", food)} */}
-        {/* {console.log(resList)} */}
-
         {resList &&
           resList.map((restraunt, index) => {
-            // {
-            //   console.log(restraunt.info);
-            // }
-            return <RestaurantCard key={index} {...restraunt.info} />;
+            return <RestaurantCard key={index} {...restraunt.info} />
           })}
       </div>
     </div>
