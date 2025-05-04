@@ -11,7 +11,7 @@ const Restraunt = () => {
 
   const [banner, setBanner] = useState([]);
   const [items, setItems] = useState([]);
-
+  const [showItem, setShowItem] = useState(-1);
   const { apiData, loading, error } = useRestrauntMenu(id);
   console.log("From RESSS", apiData);
 
@@ -72,7 +72,7 @@ const Restraunt = () => {
         items && items.map((item,index)=>{
           console.log("item: ", item?.card?.card);
           
-          return <MenuItem key={index} regularCards={item?.card?.card}/>
+          return <MenuItem key={index} regularCards={item?.card?.card} showItem={showItem===index} setShowItem={()=>{setShowItem(prev => prev===index?-1:index)}}/>
         })
       }
       

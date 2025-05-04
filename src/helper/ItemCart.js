@@ -1,9 +1,9 @@
 import React from "react";
 import { IMGURL } from "../util/constants";
 import { useDispatch } from "react-redux";
-import { addItem } from "../util/cartSlice";
+import { addItem, removeItem } from "../util/cartSlice";
 
-const ItemCard = ({ data }) => {
+const ItemCart = ({ data, index}) => {
   const itemCard = data;
   console.log("itemCards: ", itemCard);
 
@@ -11,6 +11,10 @@ const ItemCard = ({ data }) => {
 
   const handleClick = () => {
     dispatch(addItem(data));
+  }
+
+  const handleRemoveClick = () => {
+    dispatch(removeItem(index))
   }
 
   return (
@@ -52,8 +56,8 @@ const ItemCard = ({ data }) => {
             className="rounded-lg w-[120px] h-[90px] object-cover"
           />
           }
-          <button className="mt-2 px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700" onClick={()=>{handleClick()}}>
-            Add to cart
+          <button className="mt-2 px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700" onClick={()=>{handleRemoveClick()}}>
+            Remove
           </button>
         </div>
       </div>
@@ -61,4 +65,4 @@ const ItemCard = ({ data }) => {
   );
 };
 
-export default ItemCard;
+export default ItemCart;

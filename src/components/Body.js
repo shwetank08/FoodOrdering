@@ -11,7 +11,6 @@ const Body = () => {
   const [food, setFood] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
 
-
   const fetchData = async () => {
     const apicall = await fetch(URL2);
     const res = await apicall.json();

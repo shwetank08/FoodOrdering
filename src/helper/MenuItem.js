@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import ItemCard from "../components/ItemCard";
 
-const MenuItem = ({regularCards}) => {
+const MenuItem = ({regularCards, showItem, setShowItem}) => {
   const menuItems = regularCards.itemCards;
   console.log("MenuITEM: ", menuItems);
   
-  const [isOpen, setIsOpen] = useState(false);
-
-
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    setShowItem();
   }
 
   return (
@@ -23,14 +20,17 @@ const MenuItem = ({regularCards}) => {
             {regularCards.title} ({menuItems.length})
           </h2>
           <span className="text-xl">
-            {isOpen ? "▲" : "▼"}
+            {showItem ? "▲" : "▼"}
           </span>
         </div>
 
-        {isOpen && (
+        {showItem && (
           <div className="px-4 py-2 space-y-3">
             {menuItems.map((item, index) => (
-              <ItemCard data={item} key={item?.card?.info?.id || index} />
+              <>
+              {console.log("inside map", item?.card?.info)}
+              <ItemCard data={item?.card?.info} key={item?.card?.info?.id || index} />
+              </>
             ))}
           </div>
         )}

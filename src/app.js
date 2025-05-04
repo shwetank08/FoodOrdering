@@ -8,7 +8,8 @@ import Cart from './components/Cart';
 import Error  from './components/Error';
 import Restraunt from './components/Restraunt';
 import Shimmer from './helper/Shimmer';
-// import About from './components/About';
+import { Provider } from 'react-redux';
+import appStore from './util/appStore';
 
 
 //implementing lazy loading...
@@ -17,10 +18,10 @@ const About = lazy(()=>import('./components/About'));
 
 const App = () => {
     return (
-        <div>
+        <Provider store={appStore}>
             <Header />
             <Outlet /> {/* This renders the current route's component */}
-        </div>
+        </Provider>
     )
 }
 
