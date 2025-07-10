@@ -81,9 +81,3 @@ npm run start
 
 
 Set your build command as npm run build and output directory as dist
-
-🙋‍♂️ Author
-    
-    Shwetank Singh
-    🔗 GitHub
-    🌐 Live Demo
