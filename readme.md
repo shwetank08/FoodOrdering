@@ -28,14 +28,27 @@ A modern, responsive food ordering application built using **React** and deploye
 ## 📁 Folder Structure
 
 FoodOrdering/
-├── components/ # React components (e.g., Header, RestaurantCard)
-├── index.html # Main HTML file
-├── App.js # Main React component
-├── style.css # Global styles
-├── utils/ # Utility functions and constants
-└── package.json # Project configuration and scripts
-
-
+│
+├── components/               # Reusable React components
+│   ├── Header.js             # Navigation bar
+│   ├── Body.js               # Main content layout
+│   └── RestaurantCard.js     # Individual restaurant card
+│
+├── utils/                    # Utility functions and mock data
+│   └── mockData.js
+│
+├── src/                      # Source directory for assets and styles
+│   ├── assets/               # Images, icons, etc.
+│   └── styles/
+│       └── index.css         # Tailwind CSS directives (@tailwind base, etc.)
+│
+├── index.html                # Entry HTML for Parcel
+├── index.js                  # React root renderer (ReactDOM.createRoot)
+├── App.js                    # Root App component
+├── tailwind.config.js        # Tailwind configuration
+├── postcss.config.js         # PostCSS config for Tailwind
+├── package.json              # Project metadata and scripts
+└── .gitignore                # Ignored files for Git
 
 ---
 
