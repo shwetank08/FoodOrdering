@@ -5,7 +5,7 @@ import { addItem } from "../util/cartSlice";
 
 const ItemCard = ({ data }) => {
   const itemCard = data;
-  console.log("itemCards: ", itemCard);
+  // console.log("itemCards: ", itemCard);
 
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const ItemCard = ({ data }) => {
           </div>}
           <p className="text-sm text-gray-700 text-wrap break-words">
             {itemCard?.description}
-            {console.log(itemCard?.description)}
+            {/* {console.log(itemCard?.description)} */}
           </p>
         </div>
 

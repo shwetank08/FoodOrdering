@@ -56,7 +56,7 @@ const ItemCart = ({ data, index}) => {
             className="rounded-lg w-[120px] h-[90px] object-cover"
           />
           }
-          <button className="mt-2 px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700" onClick={()=>{handleRemoveClick()}}>
+          <button className="mt-2 px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700" data-testid="removeBtnCart" onClick={()=>{handleRemoveClick()}}>
             Remove
           </button>
         </div>

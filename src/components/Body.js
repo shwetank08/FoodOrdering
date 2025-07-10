@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "../helper/RestaurantCard";
-import { URL2 } from "../util/constants";
+import { URL2, URL } from "../util/constants";
 import Shimmer from "../helper/Shimmer";
 import useOnlineStatus from "../util/useOnlineStatus";
 import Offline from "../helper/Offline";
@@ -12,6 +12,7 @@ const Body = () => {
   const [isFiltered, setIsFiltered] = useState(false);
 
   const fetchData = async () => {
+    
     const apicall = await fetch(URL2);
     const res = await apicall.json();
 
@@ -42,6 +43,8 @@ const Body = () => {
           <input
             className="flex-grow p-2 border-none placeholder-slate-400 outline-none"
             placeholder="Search for restaurants"
+            type="text"
+            data-testid="searchInput"
             value={search}
             onChange={(e) => {
               e.preventDefault();

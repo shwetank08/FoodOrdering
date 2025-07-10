@@ -3,7 +3,7 @@ import ItemCard from "../components/ItemCard";
 
 const MenuItem = ({regularCards, showItem, setShowItem}) => {
   const menuItems = regularCards.itemCards;
-  console.log("MenuITEM: ", menuItems);
+  // console.log("MenuITEM: ", menuItems);
   
   const handleClick = () => {
     setShowItem();
@@ -14,6 +14,7 @@ const MenuItem = ({regularCards, showItem, setShowItem}) => {
       <div className="w-full max-w-xl border border-black rounded-xl shadow mb-4 bg-white text-black">
         <div
           className="flex justify-between items-center px-4 py-3 cursor-pointer bg-white hover:bg-black hover:text-white transition hover:border hover:border-black hover:rounded-xl hover:shadow"
+          data-testid="headerBanner"
           onClick={handleClick}
         >
           <h2 className="text-lg font-semibold">
@@ -28,7 +29,7 @@ const MenuItem = ({regularCards, showItem, setShowItem}) => {
           <div className="px-4 py-2 space-y-3">
             {menuItems.map((item, index) => (
               <>
-              {console.log("inside map", item?.card?.info)}
+              {/* {console.log("inside map", item?.card?.info)} */}
               <ItemCard data={item?.card?.info} key={item?.card?.info?.id || index} />
               </>
             ))}

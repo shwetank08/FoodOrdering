@@ -15,7 +15,7 @@ export const RestaurantCard = ({
 
   return (
 
-    <div className="container mx-auto flex flex-row flex-1 flex-wrap lg:gap-5" onClick={()=>{navigate(`/restraunt/${id}`)}}>
+    <div data-testid="resCard" className="container mx-auto flex flex-row flex-1 flex-wrap lg:gap-5" onClick={()=>{navigate(`/restraunt/${id}`)}}>
       <div className="w-72 max-w-sm rounded overflow-hidden hover:scale-95 flex-start mt-2">
         <img
           src={IMGURL + cloudinaryImageId}

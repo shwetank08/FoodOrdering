@@ -1,0 +1,341 @@
+{
+    "card": {
+        "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+            "title": "Recommended",
+            "itemCards": [
+                {
+                    "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        "info": {
+                            "id": "101188908",
+                            "name": "Crispy Veg Burger",
+                            "category": "Burgers, Wraps & Tacos",
+                            "description": "Masaledar Veg Patty, Onion & Our Signature Tomato Herby Sauce. \nQty: 137 Gms| Kcal: 362 | Carbs 53.4 Gms| Sugar: 6.5 Gms| Fat: 12.8 Gms| Saturated fat: 4.9 Gms| Protein: 8.4 Gms| Sodium: 798.2 Mg \nContains: Gluten, Soybean, Milk, Sesame seeds",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/4/19/d4387d28-73ab-45b7-b424-61588863d158_9477217d-7c7a-4834-919a-b9ae7d7cf950.jpg",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 7000,
+                            "variants": {},
+                            "variantsV2": {},
+                            "addons": [
+                                {
+                                    "groupId": "212638211",
+                                    "groupName": "Say Cheese!",
+                                    "choices": [
+                                        {
+                                            "id": "113296628",
+                                            "name": "Double Cheese Slice",
+                                            "price": 5000,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "113296618",
+                                            "name": "Single Cheese Slice",
+                                            "price": 2500,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        }
+                                    ],
+                                    "maxAddons": 1,
+                                    "maxFreeAddons": -1
+                                },
+                                {
+                                    "groupId": "212638212",
+                                    "groupName": "Make it a Combo!!",
+                                    "choices": [
+                                        {
+                                            "id": "135150923",
+                                            "name": "King Fries + Coca Cola (23% off)",
+                                            "price": 15900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150937",
+                                            "name": "Medium Fries + Coca Cola (23% Off)",
+                                            "price": 14900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135995065",
+                                            "name": "Medium Fries + Chocolate Thick Shake (34% off)",
+                                            "price": 19500,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150947",
+                                            "name": "Medium Fries + Classic Cold Coffee (22% off)",
+                                            "price": 22900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150930",
+                                            "name": "Med Fries + Coca Cola + Choco Lava (25% Off)",
+                                            "price": 21900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150943",
+                                            "name": "Regular Fries + Coca Cola (28% OFF)",
+                                            "price": 11900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        }
+                                    ],
+                                    "maxAddons": 1,
+                                    "maxFreeAddons": -1
+                                },
+                                {
+                                    "groupId": "212638213",
+                                    "groupName": "Choose Your Side",
+                                    "choices": [
+                                        {
+                                            "id": "135801125",
+                                            "name": "Korean Spicy Fries",
+                                            "price": 15900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150949",
+                                            "name": "Medium Fries",
+                                            "price": 11900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135801128",
+                                            "name": "Korean Spicy Chicken (4 Pc)",
+                                            "price": 19900,
+                                            "inStock": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135801129",
+                                            "name": "Korean Spicy Chicken Wings (4pc)",
+                                            "price": 22900,
+                                            "inStock": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "122577501",
+                                            "name": "BK Veg Pizza Puff",
+                                            "price": 6500,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150941",
+                                            "name": "King Fries",
+                                            "price": 13900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150948",
+                                            "name": "King Peri Peri Fries",
+                                            "price": 15900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150946",
+                                            "name": "Medium Peri Peri Fries",
+                                            "price": 14400,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150942",
+                                            "name": "Saucy Fries",
+                                            "price": 14500,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135850316",
+                                            "name": "Boneless Wings (4 Pcs)",
+                                            "price": 16900,
+                                            "inStock": 1,
+                                            "isEnabled": 1
+                                        }
+                                    ],
+                                    "maxAddons": 1,
+                                    "maxFreeAddons": -1
+                                },
+                                {
+                                    "groupId": "212638214",
+                                    "groupName": "Choose Your Beverages!!",
+                                    "choices": [
+                                        {
+                                            "id": "133979984",
+                                            "name": "Coca Cola Medium",
+                                            "price": 9500,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "131234133",
+                                            "name": "Classic Cold Coffee",
+                                            "price": 19900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135995064",
+                                            "name": "Chocolate Thick Shake",
+                                            "price": 18900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135996794",
+                                            "name": "Berry Blast Thick Shake",
+                                            "price": 18900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135995063",
+                                            "name": "Mango Thick Shake",
+                                            "price": 18900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "135150929",
+                                            "name": "Mocha Frappe",
+                                            "price": 26900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "131234130",
+                                            "name": "Iced Latte",
+                                            "price": 19900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        }
+                                    ],
+                                    "maxAddons": 1,
+                                    "maxFreeAddons": -1
+                                },
+                                {
+                                    "groupId": "212638215",
+                                    "groupName": "Add Dessert",
+                                    "choices": [
+                                        {
+                                            "id": "133786465",
+                                            "name": "Choco Lava Cake",
+                                            "price": 10900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "113296609",
+                                            "name": "Chocolate Mousse Cup",
+                                            "price": 11900,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        }
+                                    ],
+                                    "maxAddons": 1,
+                                    "maxFreeAddons": -1
+                                },
+                                {
+                                    "groupId": "212638216",
+                                    "groupName": "Choose Your Dip",
+                                    "choices": [
+                                        {
+                                            "id": "136580597",
+                                            "name": "Fiery Hell Dip",
+                                            "price": 2381,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "136478108",
+                                            "name": "Chilli Oregano Dip",
+                                            "price": 2381,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        },
+                                        {
+                                            "id": "136478110",
+                                            "name": "Saucy Jalapeno Dip",
+                                            "price": 2381,
+                                            "inStock": 1,
+                                            "isVeg": 1,
+                                            "isEnabled": 1
+                                        }
+                                    ],
+                                    "maxAddons": 1,
+                                    "maxFreeAddons": -1
+                                }
+                            ],
+                            "itemAttribute": {
+                                "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 7000,
+                            "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                            },
+                            "showImage": true,
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "isBestseller": true,
+                            "ratings": {
+                                "aggregatedRating": {
+                                    "rating": "4.1",
+                                    "ratingCount": "2254 ratings",
+                                    "ratingCountV2": "2254"
+                                }
+                            },
+                            "itemPriceStrikeOff": true
+                        },
+                        "analytics": {},
+                        "hideRestaurantDetails": true
+                    }
+                }
+            ],
+            "type": "CATEGORY_TYPE_RECOMMENDED",
+            "subtitleSuffix": {},
+            "categoryId": "-1"
+        }
+    }
+}
